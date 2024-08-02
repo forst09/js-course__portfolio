@@ -1,0 +1,181 @@
+@use "../utils/mixin" as m;
+
+// стили формы
+form {
+	div[role="alert"] {
+		display: none;
+	}
+
+	// Обертка поля .form-item
+	.form-item--error {
+		input {
+			border: 1px solid var(--system-alert) !important;
+		}
+
+		.form-item--error-message {
+			font-size: 14px;
+			color: var(--system-alert);
+			margin-top: 4px;
+		}
+
+	}
+
+	a[data-popup="modal-privacy"] {
+		text-decoration: underline;
+	}
+}
+
+input::-ms-clear,
+input::-ms-reveal {
+	display: none;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration {
+	display: none;
+}
+
+input,
+textarea,
+select {
+	-webkit-appearance: none;
+}
+
+.form {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    &__textarea {
+        grid-column: span 2;
+        height: 124px;
+        resize: none;
+    }
+
+    &__field {
+        position: relative;
+
+        &.active {
+            .form__label {
+                transform: translateY(-11px);
+                font-size: 12px;
+                color: var(--text-light);
+            }
+        }
+    }
+
+    &__input {
+        width: 100%;
+        border: 1px solid var(--bg-secondary);
+        background-color: var(--bg-primary);
+        border-radius: var(--br-s);
+        padding: 14px 16px;
+        font-family: "Onest", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5em; 
+        color: var(--text-primary);
+        // min-height: 44px;
+        transition: padding 0.3s ease, background-color 0.3s ease;
+
+        &.active {
+            padding: 24px 16px 4px;
+            background-color: var(--bg-tertiary);
+        }
+
+        &:focus-visible {
+            border: 1px solid var(--focus);
+        }
+
+        &:focus {
+            border: 1px solid var(--bg-secondary);
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 16px;
+        top: 15px;
+        font-family: "Onest", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5em; 
+        color: var(--text-tertiary);
+        cursor: text;
+        transition: transform 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+    }
+
+    &__descr {
+        margin-top: 8px;
+        color: var(--text-tertiary);
+    }
+
+    &__submit-container {
+        margin-top: 32px;
+    }
+
+    &__submit {
+        background-color: var(--btn);
+        width: 100%;
+        border-radius: 100px;
+        padding: 20px 32px;
+        border: unset;
+        color: var(--text-accent);
+        font-family: 'Onest', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 1.25em;
+        transition: background-color 0.3s ease;
+
+        &:focus {
+            box-shadow: 0px 0px 4px 0px #22BDFF;
+        }
+    
+        &:disabled {
+            background-color: var(--btn-disable);
+        }
+    
+        @include m.hover {
+            &:hover {
+                background-color: var(--btn-hover);
+            }
+        }
+    }
+
+    &__policy {
+        margin-top: 20px;
+        color: var(--text-light);
+    }
+    
+}
+
+@include m.mobile {
+    .form {
+        &__container {
+            gap: 12px;
+            grid-template-columns: unset;
+        }
+
+        &__textarea {
+            grid-column: unset;
+        }
+
+        &__submit-container {
+            margin-top: 20px;
+        }
+
+        &__submit {
+            padding: 14px 32px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &__policy {
+            margin-top: 12px;
+        }
+    }
+}

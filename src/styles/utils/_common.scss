@@ -1,0 +1,45 @@
+@use 'mixin' as m;
+
+html,
+body {
+	position: relative;
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.5em;
+	color: var(--text-primary);
+	height: 100%;
+}
+
+body {
+	touch-action: pan-x pan-y;
+	background-color: var(--bg-primary);
+	overflow-x: hidden;
+}
+
+.footer {
+	margin-top: auto;
+}
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+
+	&--m {
+		max-width: 1286px;
+		padding: 0 30px;
+	}
+}
+
+.img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

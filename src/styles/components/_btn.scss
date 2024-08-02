@@ -1,0 +1,227 @@
+@use '../utils/mixin' as m;
+
+.btn-arrow {
+    position: relative;
+    font-family: 'OpenSans', sans-serif;
+    font-weight: 700;
+    color: var(--btn);
+    background: transparent;
+    border: unset;
+    padding-right: 51px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 43px;
+        height: 15px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        mask-image: url("/icons/arrow.svg");
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        mask-position: center center;
+        background-color: var(--btn);
+        transition: background-color 0.3s ease;
+    }
+
+    @include m.hover{
+        &:hover {
+            color: var(--btn-hover);
+            &::after {
+                background-color: var(--btn-hover);
+            }
+        }
+    }
+}
+
+.btn-arrow-down {
+    padding: 20px;
+    border-radius: 50%;
+    background-color: var(--bg-secondary);
+    width: 68px;
+    height: auto;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arrow-animation__icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+
+    img {
+        // position: absolute;
+        padding: 8px 0;
+        animation: btn-arrow-down infinite 3s linear reverse;
+    }
+}
+
+@keyframes btn-arrow-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    20% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.btn {
+    padding: 20px 32px;
+    background-color: var(--btn);
+    color: var(--text-accent);
+    border-radius: var(--br-xl);
+    border: unset;
+    font-size: 16px;
+    line-height: 1.25em;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease;
+
+    &:focus-visible {
+        box-shadow: 0px 0px 4px 0px #22BDFF;
+    }
+
+    &:disabled {
+        background-color: var(--btn-disable);
+    }
+
+    @include m.hover {
+        &:hover {
+            background-color: var(--btn-hover);
+        }
+    }
+}
+
+.btn-text {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25em;
+}
+
+.link {
+    color: var(--btn);
+    transition: color 0.3s ease;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -1px;
+        width: 0;
+        height: 1px;
+        background-color: var(--btn);
+        transition: width 0.3s ease;
+    }
+
+    &:visited {
+        color: var(--btn-visited);
+    }
+
+    @include m.hover {
+        &:hover {
+            color: var(--btn-hover);
+
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.link-xl {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1.3em;
+}
+
+.link-light {
+    color: var(--text-accent);
+    transition: color 0.3s ease;
+
+    @include m.hover {
+        &:hover {
+            color: var(--btn-hover);
+        }
+    }
+}
+
+.btn-up {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 50%;
+    width: 60px;
+    height: auto;
+    aspect-ratio: 1;
+    padding: 16px;
+    max-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: border 0.3s ease;
+
+    &__icons {
+        width: 26px;
+        height: auto;
+        aspect-ratio: 1;
+    }
+
+    img {
+        // width: 28px;
+        // height: auto;
+        // aspect-ratio: 1;
+        animation-direction: normal;
+    }
+
+    @include m.hover {
+        &:hover {
+            border: 1px solid rgba(255, 255, 255, 1);
+        }
+    }
+}
+
+@include m.laptop {
+    .btn-arrow-down {
+        width: 63px;
+        padding: 18px;
+    }
+
+    .link-xl {
+        font-size: 34px;
+    }
+
+    .btn-up {
+        margin: 16px 0 0;
+    }
+}
+@include m.mobile {
+    .btn {
+        padding: 14px 32px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .btn-text {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .link-xl {
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,164 @@
+@use "../utils/mixin" as m;
+
+.footer {
+    margin-top: -180px;
+    padding: 140px 0 60px;
+    background-color: var(--bg-dark);
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__logo {
+        width: 330px;
+        height: auto;
+        aspect-ratio: 1 / 0.14;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__links-email {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 4px;
+    }
+
+    &__socials {
+        transform: translate(15px, -10px);
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__info {
+        transform: translateX(-57px);
+    }
+
+    &__sites {
+        display: flex;
+        gap: 23px;
+    }
+
+    &__sites-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__sites-left {
+        position: relative;
+        text-align: end;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: -12px;
+            top: 0;
+            background-color: var(--bg-tertiary);
+            opacity: 0.2;
+            width: 1px;
+            height: 100%;
+        }
+    }
+
+    &__bottom {
+        color: var(--text-accent);
+        align-items: flex-end;
+    }
+
+    &__item-copy {
+        align-items: flex-end;
+    }
+
+    &__webshop {
+        svg {
+            fill: var(--text-contrast);
+            width: 69px;
+            height: 12px;
+        }
+    }
+}
+
+@include m.laptop {
+    .footer {
+        &__logo {
+            width: 232px;
+        }
+
+        &__links {
+            gap: 12px;
+        }
+    }
+}
+
+@include m.tablet {
+    .footer {
+        margin-top: -60px;
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            gap: 32px;
+        }
+
+        &__container {
+            padding: 0 16px;
+        }
+
+        &__bottom {
+            gap: 24px;
+        }
+
+        &__item {
+            gap: 8px;
+        }
+
+        &__info {
+            transform: unset;
+        }
+
+        &__sites-item {
+            gap: 8px;
+            justify-content: space-between;
+        }
+
+        &__item-copy {
+            align-items: center;
+            flex-direction: column-reverse;
+        }
+
+        &__links-email {
+            align-items: center;
+        }
+
+        &__links {
+            align-items: center;
+        }
+    }
+}
+
+@include m.mobile {
+    .footer {
+        padding: 60px 0 20px;
+        margin-top: -20px;
+
+        &__container {
+            gap: 24px;
+        }
+    }
+}

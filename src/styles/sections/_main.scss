@@ -1,0 +1,30 @@
+.main {
+    position: relative;
+    height: 955px;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img {
+        width: 883px;
+        z-index: 0;
+        aspect-ratio: 1 / 1.1;
+        flex-shrink: 0;
+        transform: translateX(-45%);
+    }
+
+    &__text {
+        position: relative;
+        max-width: 829px;
+        z-index: 1;
+        flex-shrink: 0;
+    }
+}

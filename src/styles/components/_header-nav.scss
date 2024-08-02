@@ -1,0 +1,70 @@
+@use "../utils/mixin" as m;
+
+.header-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    padding: 20px 0;
+    background-color: var(--bg-primary);
+    border-radius: var(--br-l);
+    transition: opacity 0.5s ease;
+
+    .header__menu {
+        flex-grow: 1;
+    }
+
+    .menu__list {
+        justify-content: center;
+        gap: 24px;
+    }
+
+    .btn {
+        padding: 26px 39px;
+    }
+}
+
+@include m.desctop-xl {
+    .header-nav {
+        .header__logo {
+            display: none;
+        }
+
+        .header__menu {
+            padding: 26px 35px;
+            background-color: var(--bg-secondary);
+            border-radius: var(--br-xl);
+            flex-grow: 1;
+        }
+
+        .header__link {
+            display: none;
+        }
+
+
+        .menu__list {
+            flex-direction: row;
+            justify-content: flex-start;
+            // gap: unset;
+        }
+        
+    }
+}
+
+@include m.laptop {
+    .header-nav {
+        .header__menu {
+            padding: 26px 20px;
+        }
+
+        .menu__list {
+            // justify-content: space-between;
+            gap: 10px;
+        }
+    }
+}
+
+@include m.tablet {
+    .header-nav {
+        display: none;
+    }
+}
