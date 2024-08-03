@@ -1,0 +1,36 @@
+.skills {
+   &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 36px;
+   } 
+
+   &__item {
+        display: flex;
+        flex-direction: column;
+   }
+
+   &__skills {
+     gap: 110px;
+   }
+
+   &__awards {
+        gap: 83px;
+   }
+
+   &__progressbars {
+        display: flex;
+        flex-direction: column;
+        gap: 17px;
+   }
+
+   &__awards-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 33px;
+   }
+
+   &__award-descr {
+        margin-top: 8px;
+   }
+}

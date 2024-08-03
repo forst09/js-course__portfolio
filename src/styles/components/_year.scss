@@ -1,0 +1,22 @@
+.year {
+
+    &__year {
+        font-size: 64px;
+        font-weight: 900;
+        line-height: normal;
+    }
+    
+    &__title {
+        font-family: "Roboto", sans-serif;
+        font-size: 21px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 1.28em;
+        color: var(--text-secondary);
+    }
+    
+    &__descr {
+        color: var(--text-secondary);
+        line-height: 1.5em;
+    }
+}

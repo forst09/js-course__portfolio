@@ -1,0 +1,28 @@
+.progressbar {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+
+    &__name {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1.8em;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    &__progress {
+        min-width: 492px;
+        height: 3px;
+        background-color: transparent;
+
+        &::-webkit-progress-value {
+            transition: all 1s;
+            background-color: var(--progressbar-fill);
+        }
+
+        &::-webkit-progress-bar {
+            background-color: var(--progressbar-bg);
+        }
+    }
+}

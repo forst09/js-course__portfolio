@@ -5,9 +5,15 @@
    --bg-dark: #222222;
 
    --text-primary: #333333;
+   --text-secondary: #777777;
    --text-light: #ffffff;
 
    --icon-light: #ffffff;
+
+   --progressbar-bg: #cccccc;
+   --progressbar-fill: #FF5B5B;
+
+   --section-offset: 180px;
 }
 
 @include m.tablet {
