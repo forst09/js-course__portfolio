@@ -3,7 +3,6 @@ import { defineConfig } from 'vite';
 import { resolve } from 'path';
 import handlebars from 'vite-plugin-handlebars';
 import autoprefixer from 'autoprefixer';
-import path from 'path';
 import sortMediaQueries from 'postcss-sort-media-queries';
 import legacy from '@vitejs/plugin-legacy';
 
@@ -20,7 +19,8 @@ export default defineConfig(() => {
                 },
             }),
             handlebars({
-                partialDirectory: resolve(__dirname, 'src/layout/'),
+                partialDirectory: resolve(__dirname, 'src/layout'),
+                reloadOnPartialChange: true,
             }),
             legacy({
                 targets: ['defaults', 'not IE 11'],

@@ -1,0 +1,38 @@
+.expertise {
+    &__title {
+        margin-bottom: 96px;
+        text-align: center;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        counter-reset: expertise;
+    }
+
+    &__item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        counter-increment: expertise;
+        padding: 70px 0;
+        min-width: 274px;
+
+        &::before {
+            position: absolute;
+            left: 0;
+            content: counter(expertise, decimal-leading-zero) ".";
+            font-size: 230px;
+            line-height: 0.72em; /* 72.609% */
+            letter-spacing: -23px;
+            z-index: -1;
+        }
+    }
+    
+    &__name {
+        display: inline-block;
+        padding: 4px 8px;
+        background-color: var(--bg-primary);
+    }
+}
