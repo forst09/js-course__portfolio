@@ -1,0 +1,43 @@
+.experiences {
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 430px);
+        grid-auto-flow: dense;
+        justify-content: space-between;
+        gap: 70px;
+    }
+
+    &__title {
+        margin-bottom: 79px; 
+        grid-row-start: 1;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+    }
+
+    &__item {
+        &--education {
+            grid-column-start: 1;
+        }
+        &--experiences {
+            grid-column-start: 2;
+        }
+    }
+
+    &__item-name,
+    &__item-descr {
+        max-width: 357px;
+    }
+
+    &__item-year {
+        display: inline-block;
+        margin-bottom: 14px;
+    }
+
+    &__item-name {
+        margin-bottom: 18px;
+    }
+}
