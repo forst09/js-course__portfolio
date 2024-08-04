@@ -8,7 +8,7 @@ import legacy from '@vitejs/plugin-legacy';
 
 export default defineConfig(() => {
     return {
-        base: '',
+        base: './',
         plugins: [
             ViteImageOptimizer({
                 jpg: {

@@ -1,0 +1,26 @@
+.ticker {
+    display: flex;
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+
+    &__item {
+        padding: 0 40px;
+        animation: ticker infinite 30s linear reverse;
+        font-size: 830px;
+        font-weight: 900;
+        letter-spacing: -24.9px;
+        line-height: normal;
+        color: var(--text-light-secondary);
+        text-transform: uppercase;
+    }
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

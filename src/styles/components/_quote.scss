@@ -1,0 +1,32 @@
+.quote{
+    position: relative;
+    max-width: 829px;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: -37px;
+        top: -89px;
+        width: 200px;
+        aspect-ratio: 1;
+        background-image: url("/icons/quote.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__text {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1.6em;
+    }
+
+    &__author {
+        line-height: 1.8em;
+    }
+}

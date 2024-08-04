@@ -1,0 +1,13 @@
+.testimonials {
+    position: relative;
+
+    &__title {
+        margin-bottom: 76px;
+        text-align: center;
+    }
+
+    &__ticker {
+        top: -210px;
+        left: 0;
+    }
+}
