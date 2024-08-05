@@ -28,4 +28,8 @@
     font-size: 48px;
     font-weight: 900;
     line-height: normal;
+
+    &__underline {
+        text-decoration: underline;
+    }
 }

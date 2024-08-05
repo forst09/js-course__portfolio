@@ -8,6 +8,7 @@
    --text-secondary: #777777;
    --text-light: #ffffff;
    --text-light-secondary: #F8F8F8;
+   --text-semilight: #CCCCCC;
 
    --icon-light: #ffffff;
 
@@ -15,6 +16,11 @@
    --progressbar-fill: #FF5B5B;
 
    --section-offset: 180px;
+
+   --input-bg: rgba(241, 241, 241, 0.10);
+   --input-text: #838383;
+
+   --btn-bg-accent: #E54646;
 }
 
 @include m.tablet {

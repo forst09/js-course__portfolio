@@ -14,6 +14,7 @@
 @use '/src/styles/components/year';
 @use '/src/styles/components/quote';
 @use '/src/styles/components/ticker';
+@use '/src/styles/components/form';
 
 @use '/src/styles/sections/main';
 @use '/src/styles/sections/skills';
@@ -21,4 +22,5 @@
 @use '/src/styles/sections/works';
 @use '/src/styles/sections/testimonials';
 @use '/src/styles/sections/experiences';
+@use '/src/styles/sections/contact';
 

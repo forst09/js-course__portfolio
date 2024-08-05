@@ -1,0 +1,35 @@
+.contact {
+    padding-top: 200px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 48px;
+    }
+
+    &__info {
+        max-width: 464px;
+    }
+
+    &__text {
+        max-width: 421px;
+    }
+
+    &__form {
+        max-width: 470px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        color: var(--text-light);
+        text-align: unset;
+    }
+
+    &__text {
+        color: var(--text-semilight);
+    }
+}
