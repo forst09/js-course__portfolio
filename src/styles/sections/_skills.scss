@@ -1,3 +1,5 @@
+@use "../utils/mixin" as m;
+
 .skills {
    &__container {
         display: flex;
@@ -33,4 +35,24 @@
    &__award-descr {
         margin-top: 8px;
    }
+}
+
+@include m.tablet {
+     .skills {
+          &__container {
+               flex-direction: column;
+               gap: var(--section-offset);
+          }
+
+          &__awards,
+          &__skills {
+               gap: 48px;
+          }
+
+          &__awards-wrapper {
+               flex-direction: row;
+               justify-content: space-between;
+               flex-wrap: wrap;
+          }
+     }
 }

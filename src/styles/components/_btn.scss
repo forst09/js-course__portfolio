@@ -35,3 +35,11 @@
     line-height: 1.42em;
     text-decoration-line: underline;
 }
+
+@include m.laptop {
+    .link-icon {
+        &__text {
+            display: none;
+        }
+    }
+}

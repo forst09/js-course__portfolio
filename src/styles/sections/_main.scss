@@ -1,6 +1,9 @@
+@use "../utils/mixin" as m;
+
 .main {
     position: relative;
-    height: 955px;
+    height: 100vh;
+    // min-height: 955px;
     background-color: var(--bg-dark);
     color: var(--text-light);
     overflow: hidden;
@@ -8,23 +11,74 @@
     align-items: center;
 
     &__container {
+        height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
     &__img {
-        width: 883px;
+        width: auto;
+        height: 100%;
         z-index: 0;
         aspect-ratio: 1 / 1.1;
         flex-shrink: 0;
         transform: translateX(-45%);
+        align-self: flex-end;
     }
 
     &__text {
         position: relative;
-        max-width: 829px;
+        max-width: 64.4%;
         z-index: 1;
         flex-shrink: 0;
+    }
+}
+
+@include m.tablet {
+    .main {
+        &__img {
+            height: 90%;
+        }
+
+        &__container {
+            padding-top: 120px;
+        }
+        &__container {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__text {
+            max-width: unset;
+        }
+
+        &__img {
+            transform: unset;
+            align-self: unset;
+            margin-top: auto;
+            flex-shrink: 1;
+            height: 70%;
+        }
+    }
+}
+
+@include m.tablet-s {
+    .main {
+    }
+}
+
+@include m.mobile-s {
+    .main {
+        &__img {
+            height: 52%;
+        }
+    }
+}
+
+@media (orientation:landscape) {
+    .main {
+        min-height: 800px;
     }
 }

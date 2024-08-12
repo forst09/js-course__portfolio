@@ -61,3 +61,51 @@
         gap: 29px;
     }
 }
+
+@include m.laptop {
+    .header {
+        padding: 20px 0;
+
+        &__container {
+            position: relative;
+        }
+
+        &__about {
+            flex-direction: column;
+            gap: 4px;
+            align-items: flex-start;
+        }
+
+        &__socials {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: calc(100% - 251px - 77px - 40px);
+        }
+    }
+}
+
+@include m.tablet {
+    .header {
+        &__socials {
+            display: none;
+        }
+    }
+}
+
+@include m.tablet-s {
+    .header {
+        &__name {
+            font-size: 20px;
+        }
+
+        &__specialization {
+            font-size: 12px;
+            letter-spacing: 3px;
+        }
+
+        &__right {
+            gap: 12px;
+        }
+    }
+}

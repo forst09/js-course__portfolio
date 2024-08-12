@@ -53,3 +53,15 @@ body {
 .section {
 	margin-top: var(--section-offset);
 }
+
+@include m.tablet {
+	.container {
+		padding: 0 16px;
+	}
+}
+
+@include m.tablet-s {
+	body {
+		font-size: 16px;
+	}
+}

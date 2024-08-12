@@ -25,7 +25,9 @@
 }
 
 @include m.tablet {
-  
+   :root {
+      --section-offset: 90px;
+   }
 }
 
 @include m.mobile {
