@@ -17,6 +17,22 @@ export default defineConfig(() => {
                 jpeg: {
                     quality: 80
                 },
+                svg: {
+                    multipass: true,
+                    plugins: [
+                        {
+                            name: 'preset-default',
+                            params: {
+                                overrides: {
+                                    removeHiddenElems: false, // don't remove invisible elements
+                                    removeUselessDefs: false, // don't remove unused symbols
+                                    cleanupIds: false // don't remove symbol ids
+                                }
+                            }
+                        },
+                    ],
+                }
+
             }),
             handlebars({
                 partialDirectory: resolve(__dirname, 'src/layout'),
