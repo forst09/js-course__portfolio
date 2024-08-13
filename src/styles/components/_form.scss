@@ -12,7 +12,7 @@
         line-height: 1.15em;
 
         &::placeholder {
-            color: var(--input-text);
+            color: var(--input-placeholder);
             font-family: "Roboto", sans-serif;
             font-size: 15px;
             font-weight: 400;
@@ -23,6 +23,15 @@
     &__textarea {
         resize: none;
         min-height: 135px;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+            background-color: var(--bg-primary);
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: var(--bg-dark);
+        }
     }
 
     &__col-2 {
@@ -42,6 +51,7 @@
         line-height: 1.28em;
         letter-spacing: 1.2px;
         text-transform: uppercase;
+        transition: background-color 0.3s ease, color 0.3s ease;
 
         &::after {
             content: '';
@@ -52,6 +62,18 @@
             mask-size: cover;
             mask-position: center;
             background-color: var(--bg-primary);
+            transition: background-color 0.3s ease;
+        }
+
+        @include m.hover {
+            &:hover {
+                background-color: var(--btn-bg-accent-hover);
+                color: var(--text-hover);
+
+                &::after {
+                    background-color: var(--bg-accent);
+                }
+            }
         }
     }
 }

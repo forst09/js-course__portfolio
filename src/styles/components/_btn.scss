@@ -5,6 +5,7 @@
     align-items: center;
     gap: 11px;
     text-decoration: underline;
+    transition: text-decoration-color 0.3s ease;
 
     &::before {
         content: '';
@@ -14,6 +15,12 @@
         mask-size: cover;
         mask-position: center;
         background-color: var(--icon-light);
+    }
+
+    @include m.hover {
+        &:hover {
+            text-decoration-color: var(--text-hover);
+        }
     }
 
     &--mail {
@@ -34,6 +41,14 @@
     font-size: 21px;
     line-height: 1.42em;
     text-decoration-line: underline;
+    transition: text-decoration-color 0.3s ease;
+
+    @include m.hover {
+        &:hover {
+            text-decoration-color: var(--text-hover);
+        }
+    }
+
 }
 
 @include m.laptop {

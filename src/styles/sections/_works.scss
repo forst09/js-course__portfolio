@@ -36,16 +36,32 @@
         width: 100%;
         aspect-ratio: 1 / 0.75;
         overflow: hidden;
+
+        @include m.hover {
+            &:hover {
+                .works__card-img-img {
+                    transform: scale(1.03);
+                }
+            }
+        }
     }
 
     &__card-img-img {
         object-position: top;
+        transition: transform 0.7s ease;
     }
 
     &__card-title {
         font-size: 18px;
         font-weight: 600;
         line-height: 1.5em;
+        transition: color 0.3s ease;
+
+        @include m.hover {
+            &:hover {
+                color: var(--text-hover);
+            }
+        }
     }
 }
 

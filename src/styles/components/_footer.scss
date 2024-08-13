@@ -34,6 +34,16 @@
         gap: 12px;
     }
 
+    &__nav-link {
+        transition: color 0.3s ease;
+
+        @include m.hover {
+            &:hover {
+                color: var(--text-light);
+            }
+        }
+    }
+
     &__contacts {
         display: flex;
         flex-direction: column;
@@ -53,6 +63,16 @@
         line-height: normal;
     }
 
+    &__contacts-link {
+        transition: color 0.3s ease;
+
+        @include m.hover {
+            &:hover {
+                color: var(--text-light);
+            }
+        }
+    }
+
     &__socials {
         display: flex;
         gap: 17px;
@@ -66,6 +86,23 @@
 
     &__socials-icon {
         fill: var(--icon-semilight);
+        transition: fill 0.3s ease;
+
+        @include m.hover {
+            &:hover {
+                fill: var(--icon-light);
+            }
+        }
+    }
+
+    &__design-link {
+        transition: color 0.3s ease;
+
+        @include m.hover {
+            &:hover {
+                color: var(--text-light);
+            }
+        }
     }
 }
 

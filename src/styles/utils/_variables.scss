@@ -3,15 +3,18 @@
 :root {
    --bg-primary: #ffffff;
    --bg-dark: #222222;
+   --bg-accent: #E54646;
 
    --text-primary: #333333;
    --text-secondary: #777777;
    --text-light: #ffffff;
    --text-light-secondary: #F8F8F8;
    --text-semilight: #CCCCCC;
+   --text-hover: #E54646;
 
    --icon-light: #ffffff;
    --icon-semilight: #CCCCCC;
+   --icon-hover: #E54646;
 
    --progressbar-bg: #cccccc;
    --progressbar-fill: #FF5B5B;
@@ -19,9 +22,11 @@
    --section-offset: 180px;
 
    --input-bg: rgba(241, 241, 241, 0.10);
-   --input-text: #838383;
+   --input-text: #FFFFFF;
+   --input-placeholder: #838383;
 
    --btn-bg-accent: #E54646;
+   --btn-bg-accent-hover: #ffffff;
 }
 
 @include m.tablet {
