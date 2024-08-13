@@ -3,7 +3,7 @@
 .main {
     position: relative;
     height: 100vh;
-    // min-height: 955px;
+    height: 100dvh;
     background-color: var(--bg-dark);
     color: var(--text-light);
     overflow: hidden;
@@ -61,11 +61,6 @@
             flex-shrink: 1;
             height: 70%;
         }
-    }
-}
-
-@include m.tablet-s {
-    .main {
     }
 }
 
