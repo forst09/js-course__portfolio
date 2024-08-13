@@ -1,3 +1,5 @@
+@use "../utils/mixin" as m;
+
 .contact {
     padding-top: 200px;
 
@@ -31,5 +33,35 @@
 
     &__text {
         color: var(--text-semilight);
+    }
+}
+
+@include m.tablet {
+    .contact {
+        padding-top: 100px;
+        &__container {
+            flex-direction: column;
+        }
+
+        &__info {
+            max-width: 700px;
+        }
+
+        &__text {
+            max-width: 500px;
+        }
+
+        &__form {
+            max-width: unset;
+            width: 100%;
+        }
+    }
+}
+
+@include m.mobile {
+    .contact {
+        &__form {
+            grid-template-columns: 1fr;
+        }
     }
 }

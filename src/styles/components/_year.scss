@@ -1,5 +1,6 @@
-.year {
+@use "../utils/mixin" as m;
 
+.year {
     &__year {
         font-size: 64px;
         font-weight: 900;
@@ -18,5 +19,17 @@
     &__descr {
         color: var(--text-secondary);
         line-height: 1.5em;
+    }
+}
+
+@include m.tablet-s {
+    .year {
+        &__year {
+            font-size: 48px;
+        }
+
+        &__title {
+            font-size: 18px;
+        }
     }
 }

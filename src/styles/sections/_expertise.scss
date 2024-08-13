@@ -1,3 +1,5 @@
+@use "../utils/mixin" as m;
+
 .expertise {
     &__title {
         margin-bottom: 96px;
@@ -7,7 +9,7 @@
     &__list {
         display: flex;
         justify-content: space-between;
-        gap: 24px;
+        gap: 48px 24px;
         counter-reset: expertise;
     }
 
@@ -34,5 +36,34 @@
         display: inline-block;
         padding: 4px 8px;
         background-color: var(--bg-primary);
+    }
+}
+
+@include m.tablet {
+    .expertise {
+        &__list {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__title {
+            margin-bottom: 48px;
+        }
+    }
+}
+
+@include m.tablet-s {
+    .expertise {
+        &__list {
+            row-gap: 24px;
+        }
+        
+        &__item {
+            min-width: 195px;
+
+            &::before {
+                font-size: 190px;
+            }
+        }
     }
 }

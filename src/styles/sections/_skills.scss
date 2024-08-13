@@ -49,10 +49,15 @@
                gap: 48px;
           }
 
+          &__awards {
+               text-align: center;
+          }
+
           &__awards-wrapper {
-               flex-direction: row;
+               // flex-direction: row;
                justify-content: space-between;
-               flex-wrap: wrap;
+               // flex-wrap: wrap;
+               align-items: center;
           }
      }
 }

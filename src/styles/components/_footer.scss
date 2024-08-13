@@ -21,9 +21,9 @@
     &__nav {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        max-width: 629px;
+        max-width: 665px;
         width: 100%;
-        gap: 146px 32px;
+        gap: 32px;
         font-size: 15px;
         line-height: normal;
     }
@@ -69,3 +69,41 @@
     }
 }
 
+@include m.tablet {
+    .footer {
+        margin-top: var(--section-offset);
+        padding: 48px 0;
+
+        &__top {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__nav {
+            max-width: unset;
+        }
+
+        &__contacts {
+            text-align: center;
+        }
+
+        &__container {
+            gap: 48px;
+        }
+    }
+}
+
+@include m.tablet-s {
+    .footer {
+        padding: 0 0 24px;
+        &__nav {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &__bottom {
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+    }
+}

@@ -1,3 +1,5 @@
+@use "../utils/mixin" as m;
+
 .quote{
     position: relative;
     max-width: 829px;
@@ -28,5 +30,31 @@
 
     &__author {
         line-height: 1.8em;
+    }
+}
+
+@include m.tablet {
+    .quote{
+        gap: 18px;
+
+        &::before {
+            left: 18px;
+            top: -38px;
+            width: 120px;
+        }
+    }
+}
+
+@include m.tablet-s {
+    .quote {
+        
+        &::before {
+            top: -24px;
+            width: 80px;
+        }
+        
+        &__text {
+            font-size: 24px;
+        }
     }
 }

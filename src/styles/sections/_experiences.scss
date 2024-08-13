@@ -1,3 +1,5 @@
+@use "../utils/mixin" as m;
+
 .experiences {
     &__container {
         display: grid;
@@ -37,7 +39,49 @@
         margin-bottom: 14px;
     }
 
-    &__item-name {
-        margin-bottom: 18px;
+    &__item-descr {
+        margin-top: 18px;
+    }
+}
+
+@include m.tablet {
+    .experiences {
+        &__container {
+            gap: 24px;
+            grid-template-columns: 1fr;
+            grid-auto-flow: unset;
+            text-align: center;
+        }
+
+        &__title {
+            margin-bottom: 24px;
+            grid-row-start: unset;
+        }
+
+        &__item {
+            &--experiences {
+                grid-column-start: unset;
+            }
+        }
+
+        &__item + &__title  {
+            margin-top: calc(var(--section-offset) - 24px);
+        }
+
+        &__item-name {
+            margin: 0 auto;
+        }
+
+        &__item-descr {
+            margin: 8px auto 0;
+        }
+    }
+}
+
+@include m.tablet-s {
+    .experiences {
+        &__item-year {
+            margin-bottom: 8px;
+        }
     }
 }

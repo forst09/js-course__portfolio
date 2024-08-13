@@ -2,9 +2,14 @@ export default function fillProgressbars() {
 
     const skillsSection = document.querySelector('.skills');
     const progressbars = document.querySelectorAll('.progressbar__progress');
+    let threshold;
+    if (window.innerWidth > 1024) {
+        threshold = 0.5
+    }
+    else threshold = 0.3;
 
     const options = {
-        threshold: 0.5,
+        threshold: threshold,
     }
 
     const callback = (entries) => {

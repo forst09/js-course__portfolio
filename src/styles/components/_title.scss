@@ -1,3 +1,5 @@
+@use "../utils/mixin" as m;
+
 .title-main {
     margin-bottom: 10px;
     font-size: 110px;
@@ -32,5 +34,19 @@
 
     &__underline {
         text-decoration: underline;
+    }
+}
+
+@include m.tablet-s {
+    .title-l {
+        font-size: 36px;
+    }
+
+    .title-m {
+        font-size: 30px;
+    }
+
+    .title-s {
+        font-size: 14px;
     }
 }

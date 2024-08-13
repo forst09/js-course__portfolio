@@ -56,3 +56,10 @@
     }
 }
 
+@include m.mobile {
+    .form {
+        &__col-2 {
+            grid-column: unset;
+        }
+    }
+}

@@ -1,5 +1,8 @@
+@use "../utils/mixin" as m;
+
 .testimonials {
     position: relative;
+    overflow-x: hidden;
 
     &__title {
         margin-bottom: 76px;
@@ -9,5 +12,25 @@
     &__ticker {
         top: -210px;
         left: 0;
+    }
+}
+
+@include m.tablet {
+    .testimonials {
+        &__title {
+            margin-bottom: 24px;
+        }
+
+        &__ticker {
+            top: -12vh;
+        }
+    }
+}
+
+@include m.tablet-s {
+    .testimonials {
+        &__ticker {
+            margin-top: -5vh;
+        }
     }
 }
